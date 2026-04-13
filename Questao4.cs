@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lo1_AnaliseExperimental
 {
-    public class Questa4
+    public class Questao4
     {
 
         public static void RemoverListPosicaoAleatoria(List<int> listaARemover)
