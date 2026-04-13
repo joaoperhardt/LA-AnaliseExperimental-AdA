@@ -8,7 +8,7 @@ namespace Lo1_AnaliseExperimental
         {
             int[] tamanhos = new int[] { 10, 1000, 100000 };
 
-            // Questão 1
+            // Questão 1.1
             Console.WriteLine("-------- Questão 1.1 -------------");
             long tempoList = 0L;
             long tempoLinkedList = 0L;
@@ -20,7 +20,7 @@ namespace Lo1_AnaliseExperimental
             Console.WriteLine($"Tempo médido List: {tempoList/20} ms");
             Console.WriteLine($"Tempo médido LinkedList: {tempoLinkedList/20} ms");
 
-            // Questão 2
+            // Questão 1.2
             Console.WriteLine("-------- Questão 1.2 -------------");
             var totalList = 0L;
             Questao1.inserirList(0);
