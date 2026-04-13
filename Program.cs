@@ -9,31 +9,43 @@ namespace Lo1_AnaliseExperimental
             int[] tamanhos = new int[] { 10, 1000, 100000 };
 
             // Questão 1
-            Console.WriteLine("-------- Questão 1 -------------");
+            Console.WriteLine("-------- Questão 1.1 -------------");
             long tempoList = 0L;
             long tempoLinkedList = 0L;
             for(int i = 0; i < 20; i++)
             {
-                tempoList += medirTempo(() => Questao1.inserirListPosicaoAleatoria(999));
-                tempoLinkedList += medirTempo(() => Questao1.inserirLinkedListPosicaoAleatoria(999));
+                tempoList += medirTempo(() => Questao1.inserirList(999));
+                tempoLinkedList += medirTempo(() => Questao1.inserirLinkedList(999));
             }
             Console.WriteLine($"Tempo médido List: {tempoList/20} ms");
             Console.WriteLine($"Tempo médido LinkedList: {tempoLinkedList/20} ms");
 
             // Questão 2
-            Console.WriteLine("-------- Questão 2 -------------");
+            Console.WriteLine("-------- Questão 1.2 -------------");
             var totalList = 0L;
-            Questao2.inserirList(0);
+            Questao1.inserirList(0);
             for (int i = 0; i < tamanhos.Length; i++)
             {
                 totalList = 0L;
                 for (int j = 0; j < 10; j++)
                 {
-                    var tempoListQuestao2 = medirTempo(() => Questao2.inserirList(tamanhos[i]));
-                    totalList += tempoListQuestao2;
+                    var tempoListQuestao12 = medirTempo(() => Questao1.inserirList(tamanhos[i]));
+                    totalList += tempoListQuestao12;
                 }
                 Console.WriteLine($"Tamanho: {tamanhos[i]} - Tempo médio List: {totalList / 10} nanosegundos");
             }
+
+            // Questão 2
+            Console.WriteLine("-------- Questão 2 -------------");
+            long tempoListQuestao2 = 0L;
+            long tempoLinkedListQuestao2 = 0L;
+            for (int i = 0; i < 20; i++)
+            {
+                tempoListQuestao2 += medirTempo(() => Questao2.inserirListPosicaoAleatoria(999));
+                tempoLinkedListQuestao2 += medirTempo(() => Questao2.inserirLinkedListPosicaoAleatoria(999));
+            }
+            Console.WriteLine($"Tempo médido List: {tempoListQuestao2 / 20} ms");
+            Console.WriteLine($"Tempo médido LinkedList: {tempoLinkedListQuestao2 / 20} ms");
 
             // Questão 3
             Console.WriteLine("-------- Questão 3 -----------");
