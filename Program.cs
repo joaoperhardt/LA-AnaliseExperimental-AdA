@@ -17,8 +17,8 @@ namespace Lo1_AnaliseExperimental
                 tempoList += medirTempo(() => Questao1.inserirList(999));
                 tempoLinkedList += medirTempo(() => Questao1.inserirLinkedList(999));
             }
-            Console.WriteLine($"Tempo médido List: {tempoList/20} ms");
-            Console.WriteLine($"Tempo médido LinkedList: {tempoLinkedList/20} ms");
+            Console.WriteLine($"Tempo médio List: {tempoList/20} ms");
+            Console.WriteLine($"Tempo médio LinkedList: {tempoLinkedList/20} ms");
 
             // Questão 1.2
             Console.WriteLine("-------- Questão 1.2 -------------");
@@ -37,15 +37,15 @@ namespace Lo1_AnaliseExperimental
 
             // Questão 2
             Console.WriteLine("-------- Questão 2 -------------");
-            long tempoListQuestao2 = 0L;
-            long tempoLinkedListQuestao2 = 0L;
+            tempoList = 0L;
+            tempoLinkedList = 0L;
             for (int i = 0; i < 20; i++)
             {
-                tempoListQuestao2 += medirTempo(() => Questao2.inserirListPosicaoAleatoria(999));
-                tempoLinkedListQuestao2 += medirTempo(() => Questao2.inserirLinkedListPosicaoAleatoria(999));
+                tempoList += medirTempo(() => Questao2.inserirListPosicaoAleatoria(999));
+                tempoLinkedList += medirTempo(() => Questao2.inserirLinkedListPosicaoAleatoria(999));
             }
-            Console.WriteLine($"Tempo médido List: {tempoListQuestao2 / 20} ms");
-            Console.WriteLine($"Tempo médido LinkedList: {tempoLinkedListQuestao2 / 20} ms");
+            Console.WriteLine($"Tempo médio List: {tempoList / 20} ms");
+            Console.WriteLine($"Tempo médio LinkedList: {tempoLinkedList / 20} ms");
 
             // Questão 3
             Console.WriteLine("-------- Questão 3 -----------");
@@ -59,8 +59,8 @@ namespace Lo1_AnaliseExperimental
                 LinkedList<int> linkedListQuestao3 = new LinkedList<int>(Enumerable.Range(0, tamanhos[1]).Select(e => e));
                 removerTempoLinkedList += medirTempo(() => Questao3.RemoverPrimeiroElementoLinkedList(linkedListQuestao3));
             }
-            Console.WriteLine($"Tempo Médido List: {removerTempoLista / 20} ms");
-            Console.WriteLine($"Tempo Médido LinkedList: {removerTempoLinkedList / 20} ms");
+            Console.WriteLine($"Tempo médio List: {removerTempoLista / 20} ms");
+            Console.WriteLine($"Tempo médio LinkedList: {removerTempoLinkedList / 20} ms");
 
 
              removerTempoLista = 0L;
@@ -73,8 +73,8 @@ namespace Lo1_AnaliseExperimental
                 LinkedList<int> linkedListQuestao3 = new LinkedList<int>(Enumerable.Range(0, tamanhos[1]).Select(e => e));
                 removerTempoLinkedList += medirTempo(() => Questao3.RemoverUltimoElementoLinkedList(linkedListQuestao3));
             }
-            Console.WriteLine($"Tempo Médido Remover Último elemento List: {removerTempoLista /20} ms");
-            Console.WriteLine($"Tempo Médido Remover último elemento LinkedList: {removerTempoLinkedList / 20} ms");
+            Console.WriteLine($"Tempo médio Remover Último elemento List: {removerTempoLista /20} ms");
+            Console.WriteLine($"Tempo médio Remover último elemento LinkedList: {removerTempoLinkedList / 20} ms");
 
 
             //Questão 4
@@ -87,8 +87,8 @@ namespace Lo1_AnaliseExperimental
                 removerTempoLinkedList += medirTempo(() => Questao4.RemoverLinkedListPosicaoAleatoria(new LinkedList<int>(Enumerable.Range(1, 9999).Select((e) => e).ToArray()))); 
             }
 
-            Console.WriteLine($"Tempo Médio Remover elemento aletório List: {removerTempoLista / 20} ms");
-            Console.WriteLine($"Tempo Médido Remover elemento aleatório LinkedList: {removerTempoLinkedList /20} ms");
+            Console.WriteLine($"Tempo médio Remover elemento aletório List: {removerTempoLista / 20} ms");
+            Console.WriteLine($"Tempo médio Remover elemento aleatório LinkedList: {removerTempoLinkedList /20} ms");
 
             // Questão 5
             Console.WriteLine("-------------- Questão 5 ----------");
@@ -105,8 +105,8 @@ namespace Lo1_AnaliseExperimental
                 }
             }
 
-            Console.WriteLine($"Tempo Médido Acesso Index aleatório List: {tempoList / 20} ms");
-            Console.WriteLine($"Tempo Médido Acesso Index aleatório LinkedList: {tempoLinkedList / 20} ms");
+            Console.WriteLine($"Tempo médio Acesso Index aleatório List: {tempoList / 20} ms");
+            Console.WriteLine($"Tempo médio Acesso Index aleatório LinkedList: {tempoLinkedList / 20} ms");
 
         }
               
